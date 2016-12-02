@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<ContentPage x:Class="Calculator.MainPage" xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
+<ContentPage x:Class="Calculator.MainPage" xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:local="clr-namespace:Calculator">
 	<Grid Padding="5,0" RowSpacing="1" ColumnSpacing="1" BackgroundColor="Black">
 		<Grid.RowDefinitions>
 			<RowDefinition Height="2*" />
@@ -26,10 +26,10 @@
 		<Button Text="2" Grid.Row="3" Grid.Column="1" BackgroundColor="White" TextColor="Black" Font="36" BorderRadius="0" Clicked="OnSelectNumber" />
 		<Button Text="3" Grid.Row="3" Grid.Column="2" BackgroundColor="White" TextColor="Black" Font="36" BorderRadius="0" Clicked="OnSelectNumber" />
 		<Button Text="0" Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="3" BackgroundColor="White" TextColor="Black" Font="36" BorderRadius="0" Clicked="OnSelectNumber" />
-		<Button Text="/" Grid.Row="1" Grid.Column="3" BackgroundColor="#FFA500" TextColor="White" Font="36" BorderRadius="0" Clicked="OnSelectOperator" />
-		<Button Text="X" Grid.Row="2" Grid.Column="3" BackgroundColor="#FFA500" TextColor="White" Font="36" BorderRadius="0" Clicked="OnSelectOperator" />
-		<Button Text="-" Grid.Row="3" Grid.Column="3" BackgroundColor="#FFA500" TextColor="White" Font="36" BorderRadius="0" Clicked="OnSelectOperator" />
-		<Button Text="+" Grid.Row="4" Grid.Column="3" BackgroundColor="#FFA500" TextColor="White" Font="36" BorderRadius="0" Clicked="OnSelectOperator" />
+		<Button Text="/" Grid.Row="1" Grid.Column="3" BackgroundColor="{x:Static local:SharedResources.OpButtonBkColor}" TextColor="White" Font="36" BorderRadius="0" Clicked="OnSelectOperator" />
+		<Button Text="X" Grid.Row="2" Grid.Column="3" BackgroundColor="{x:Static local:SharedResources.OpButtonBkColor}" TextColor="White" Font="36" BorderRadius="0" Clicked="OnSelectOperator" />
+		<Button Text="-" Grid.Row="3" Grid.Column="3" BackgroundColor="{x:Static local:SharedResources.OpButtonBkColor}" TextColor="White" Font="36" BorderRadius="0" Clicked="OnSelectOperator" />
+		<Button Text="+" Grid.Row="4" Grid.Column="3" BackgroundColor="{x:Static local:SharedResources.OpButtonBkColor}" TextColor="White" Font="36" BorderRadius="0" Clicked="OnSelectOperator" />
 		<Button Text="C" Grid.Row="5" Grid.Column="0" BackgroundColor="#808080" TextColor="White" Font="36" BorderRadius="0" Clicked="OnClear" />
 		<Button Text="=" Grid.Row="5" Grid.Column="1" Grid.ColumnSpan="3" BackgroundColor="#FFA500" TextColor="White" Font="36" BorderRadius="0" Clicked="OnCalculate" />
 	</Grid>
